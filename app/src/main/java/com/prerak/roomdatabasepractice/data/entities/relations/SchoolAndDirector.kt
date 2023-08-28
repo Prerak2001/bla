@@ -11,5 +11,5 @@ data class SchoolAndDirector(
         parentColumn = "schoolName",
         entityColumn = "schoolName"
     )
-    val director  :Director
+    val director: Director
 )

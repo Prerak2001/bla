@@ -1,8 +1,9 @@
 package com.prerak.roomdatabasepractice.data.entities
 
+import androidx.room.Entity
 import androidx.room.PrimaryKey
-
-data class StudentEntity(
+@Entity
+data class Student(
     @PrimaryKey(autoGenerate = false)
     val studentName : String,
     val semester : Int,

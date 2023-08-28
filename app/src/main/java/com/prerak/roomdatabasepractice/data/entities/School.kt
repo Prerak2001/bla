@@ -1,3 +1,10 @@
-package com.prerak.roomdatabasepractice.data.entities.relations
+package com.prerak.roomdatabasepractice.data.entities
 
-data class Student()
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class School(
+    @PrimaryKey(autoGenerate = false)
+    val schoolName: String
+)

@@ -1,3 +1,17 @@
 package com.prerak.roomdatabasepractice.data.entities.relations
 
-data class StudentWithSubjects()
+import androidx.room.Embedded
+import androidx.room.Junction
+import androidx.room.Relation
+import com.prerak.roomdatabasepractice.data.entities.Student
+import com.prerak.roomdatabasepractice.data.entities.Subject
+
+data class StudentWithSubjects(
+    @Embedded val student: Student,
+    @Relation(
+        parentColumn = "studentName",
+        entityColumn = "subjectName",
+        associateBy = Junction(StudentSubjectCrossRef::class)
+    )
+    val subjects: List<Subject>
+)

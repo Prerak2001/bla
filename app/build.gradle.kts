@@ -73,4 +73,5 @@ dependencies {
     ksp("androidx.room:room-compiler:2.5.2")
     annotationProcessor("androidx.room:room-compiler:2.5.2")
     implementation("androidx.room:room-ktx:2.5.2")
+    implementation ("com.google.accompanist:accompanist-pager:0.27.1")
 }
